@@ -22,8 +22,10 @@
   <!-- Floating Hearts -->
   <div class="floating-hearts"></div>
 
-  <!-- Main Card & Music Button Container -->
+  <!-- Card Container -->
   <div class="card-container">
+
+    <!-- Main Card -->
     <div class="card" id="mainCard">
       <h1 id="greeting">Hey Esme! 😽</h1>
       <p id="introText" class="intro-text">Ik making a website might be a little cringy but…</p>
@@ -38,19 +40,20 @@
       <p id="noMessage" class="no-message"></p>
     </div>
 
-    <!-- Music Toggle -->
+    <!-- Letter Card -->
+    <div class="card hidden" id="letterCard">
+      <h2>For you 💌</h2>
+      <p id="letterText"></p>
+    </div>
+
+    <!-- Music Toggle below cards -->
     <button id="musicToggle" class="music-btn">
       <svg id="musicIcon" width="24" height="24" viewBox="0 0 24 24">
-          <polygon points="5,3 19,12 5,21" fill="white"></polygon> <!-- play icon -->
+        <polygon points="5,3 19,12 5,21" fill="white"></polygon> <!-- play icon -->
       </svg>
     </button>
-  </div>
 
-  <!-- Letter Section -->
-  <div class="card hidden" id="letterCard">
-    <h2>For you 💌</h2>
-    <p id="letterText"></p>
-  </div>
+  </div> <!-- end card-container -->
 
   <audio id="bgMusic" loop autoplay>
     <source src="music.mp3" type="audio/mp3">
