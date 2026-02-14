@@ -195,6 +195,12 @@ button {
   height: 24px;
 }
 
+@media (max-width: 500px) {
+  .music-btn {
+    bottom: 100px; /* raise it above the card */
+    right: 20px;
+  }
+}
 
 /* --------------------------
    Typewriter Letter
@@ -240,4 +246,5 @@ button {
   text-align: center;
   margin: 0.5rem 0;
 }
+
 
