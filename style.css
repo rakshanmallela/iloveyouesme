@@ -195,18 +195,23 @@ button {
   height: 24px;
 }
 
+/* Mobile: center below the card */
 @media (max-width: 600px) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* center content horizontally */
+  }
+
   .music-btn {
-    position: relative;   /* relative to flow instead of fixed */
-    bottom: auto;         /* remove fixed bottom */
-    left: 50%;            /* center horizontally */
+    position: relative;   /* relative to container */
+    bottom: auto;
     right: auto;
-    margin: 1rem auto 0 auto; /* top margin to give space below card */
-    transform: translateX(-50%); /* center properly */
+    left: auto;
+    margin: 1rem 0 0 0;  /* space below card */
+    transform: none;      /* remove translate */
   }
 }
-
-
 /* --------------------------
    Typewriter Letter
 -------------------------- */
@@ -251,6 +256,7 @@ button {
   text-align: center;
   margin: 0.5rem 0;
 }
+
 
 
 
