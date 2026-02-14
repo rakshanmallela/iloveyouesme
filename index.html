@@ -22,19 +22,28 @@
   <!-- Floating Hearts -->
   <div class="floating-hearts"></div>
 
-  <!-- Main Card -->
-  <div class="card" id="mainCard">
-    <h1 id="greeting">Hey Esme! 😽</h1>
-    <p id="introText" class="intro-text">Ik making a website might be a little cringy but…</p>
+  <!-- Main Card & Music Button Container -->
+  <div class="card-container">
+    <div class="card" id="mainCard">
+      <h1 id="greeting">Hey Esme! 😽</h1>
+      <p id="introText" class="intro-text">Ik making a website might be a little cringy but…</p>
 
-    <h1>Will you be my Valentine?</h1>
+      <h1>Will you be my Valentine?</h1>
 
-    <div class="buttons">
-      <button id="yesBtn" class="val-btn yes">Yes ❤️</button>
-      <button id="noBtn" class="val-btn no">No 😾</button>
+      <div class="buttons">
+        <button id="yesBtn" class="val-btn yes">Yes ❤️</button>
+        <button id="noBtn" class="val-btn no">No 😾</button>
+      </div>
+
+      <p id="noMessage" class="no-message"></p>
     </div>
 
-    <p id="noMessage" class="no-message"></p>
+    <!-- Music Toggle -->
+    <button id="musicToggle" class="music-btn">
+      <svg id="musicIcon" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="5,3 19,12 5,21" fill="white"></polygon> <!-- play icon -->
+      </svg>
+    </button>
   </div>
 
   <!-- Letter Section -->
@@ -42,14 +51,6 @@
     <h2>For you 💌</h2>
     <p id="letterText"></p>
   </div>
-
-  <!-- Music Toggle -->
-    <button id="musicToggle" class="music-btn">
-    <svg id="musicIcon" width="24" height="24" viewBox="0 0 24 24">
-        <polygon points="5,3 19,12 5,21" fill="white"></polygon> <!-- play icon -->
-    </svg>
-    </button>
-
 
   <audio id="bgMusic" loop autoplay>
     <source src="music.mp3" type="audio/mp3">
