@@ -197,11 +197,15 @@ button {
 
 @media (max-width: 600px) {
   .music-btn {
-    bottom: 60%;       /* a little higher than exact center */
-    left: 50%;
-    transform: translate(-50%, 50%);
+    position: relative;   /* relative to flow instead of fixed */
+    bottom: auto;         /* remove fixed bottom */
+    left: 50%;            /* center horizontally */
+    right: auto;
+    margin: 1rem auto 0 auto; /* top margin to give space below card */
+    transform: translateX(-50%); /* center properly */
   }
 }
+
 
 /* --------------------------
    Typewriter Letter
@@ -247,6 +251,7 @@ button {
   text-align: center;
   margin: 0.5rem 0;
 }
+
 
 
 
