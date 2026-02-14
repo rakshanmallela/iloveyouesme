@@ -1,0 +1,243 @@
+/* --------------------------
+   Body & Background
+-------------------------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffeef3, #fff8f5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Paw print pattern (optional subtle texture) */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 20px 20px, rgba(255, 182, 193, 0.05) 8px, transparent 9px);
+  background-size: 60px 60px;
+  z-index: 0;
+}
+
+/* Handwritten font for greeting & main ask */
+#greeting {
+  font-family: 'Sour Gummy', cursive;
+}
+
+/* Clean rounded font for everything else */
+body, button, #letterText, .no-message {
+  font-family: 'Inter', sans-serif;
+}
+
+#mainCard h2 {
+  font-family: 'Sour Gummy', cursive;
+  font-size: 2rem;
+  color: #d94f70;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* --------------------------
+   Glow Orbs
+-------------------------- */
+.glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.glow1 {
+  background: #ffb6c1;
+  top: -50px;
+  left: -50px;
+}
+
+.glow2 {
+  background: #ffd6e8;
+  bottom: -50px;
+  right: -50px;
+}
+
+/* --------------------------
+   Floating Hearts
+-------------------------- */
+.floating-hearts {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.floating-hearts span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 1rem;
+  opacity: 0.2;
+  animation: rise 8s linear infinite;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 0.2; }
+  50% { opacity: 0.4; }
+  100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+}
+
+/* --------------------------
+   Card Design
+-------------------------- */
+.card {
+  background: #fffdfc;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1; /* ensure above glows and hearts */
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  color: #d94f70;
+}
+
+/* --------------------------
+   Buttons
+-------------------------- */
+.buttons {
+  margin-top: 1.5rem;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+}
+
+.yes {
+  background: #ff6b8a;
+  color: white;
+}
+
+.no {
+  background: #f2f2f2;
+  color: #555;
+}
+
+.val-btn {
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  font-family: 'Sour Gummy', cursive;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.val-btn:hover {
+  transform: scale(1.1);
+}
+/* --------------------------
+   Music Button
+-------------------------- */
+.music-btn {
+  position: fixed;
+  bottom: 20px;  /* bottom-right corner */
+  right: 20px;
+  background: #ff6b8a;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+}
+
+.music-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* --------------------------
+   Typewriter Letter
+-------------------------- */
+#letterCard {
+  max-height: 70vh; /* limit card height to 70% of viewport */
+  overflow-y: auto; /* vertical scroll if content is too long */
+  padding: 2rem;
+}
+
+#letterText {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.intro-text {
+  font-size: 1rem;
+  color: #c25a7c;
+  margin-top: 0.5rem;
+  font-style: italic; /* optional for playful vibe */
+}
+
+#valentineText {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 1rem 0;
+  color: #d94f70;
+}
+
+.no-message {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-style: italic; /* optional playful vibe *//* reserve space so layout doesn’t jump */
+}
+
+.final-line {
+  font-family: 'Sour Gummy', cursive; /* same playful font */
+  font-size: 1.5rem; /* bigger than the rest */
+  color: #d94f70; /* pink/red accent */
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+

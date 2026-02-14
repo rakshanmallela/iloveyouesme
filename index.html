@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You 💌</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Glow Orbs -->
+  <div class="glow glow1"></div>
+  <div class="glow glow2"></div>
+
+  <!-- Floating Hearts -->
+  <div class="floating-hearts"></div>
+
+  <!-- Main Card -->
+  <div class="card" id="mainCard">
+    <h1 id="greeting">Hey Esme! 😽</h1>
+    <p id="introText" class="intro-text">Ik making a website might be a little cringy but…</p>
+
+    <h1>Will you be my Valentine?</h1>
+
+    <div class="buttons">
+      <button id="yesBtn" class="val-btn yes">Yes ❤️</button>
+      <button id="noBtn" class="val-btn no">No 😾</button>
+    </div>
+
+    <p id="noMessage" class="no-message"></p>
+  </div>
+
+  <!-- Letter Section -->
+  <div class="card hidden" id="letterCard">
+    <h2>For you 💌</h2>
+    <p id="letterText"></p>
+  </div>
+
+  <!-- Music Toggle -->
+    <button id="musicToggle" class="music-btn">
+    <svg id="musicIcon" width="24" height="24" viewBox="0 0 24 24">
+        <polygon points="5,3 19,12 5,21" fill="white"></polygon> <!-- play icon -->
+    </svg>
+    </button>
+
+
+  <audio id="bgMusic" loop autoplay>
+    <source src="music.mp3" type="audio/mp3">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
